@@ -35,3 +35,14 @@ const estudiantes = [
 estudiantes.forEach(function(estudiante) {
 console.log(`Nombre: ${estudiante.nombre}, Nota final: ${estudiante.notaFinal}`);
 });
+
+// 5. Método para calcular la edad
+const persona = {
+  nombre: "Selena",
+  anioNacimiento: 1995,
+calcularEdad: function () {
+const anioActual = 2026
+return anioActual - this.anioNacimiento;
+}
+}
+console.log(persona.calcularEdad())
