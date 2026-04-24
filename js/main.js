@@ -1,7 +1,7 @@
 // 1. Crear un objeto Persona
-let objPersona = {
+const objPersona = {
   nombre: "Joanie",
-  edad: "25",
+  edad: 25,
   ciudad: "Paris",
 }
 console.log(objPersona.nombre);
@@ -12,5 +12,17 @@ console.log(objPersona.ciudad);
 objPersona.ciudad = "Bordeaux";
 objPersona.profesión = "modelo";
 
-console.log(objPersona.ciudad);
-console.log(objPersona.profesión);
+console.log(objPersona);
+
+// 3. Objeto
+const objLibro = {
+  titulo: "Emma",
+  autor: "Jane Austen",
+  anioPublicacion: 1815,
+  resumen() {
+  return `El libro ${this.titulo} fue escrito por ${this.autor} en ${this.anioPublicacion}`
+  }
+}
+console.log(objLibro.resumen());
+
+// 3. Objeto
