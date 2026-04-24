@@ -8,11 +8,13 @@ console.log(objPersona.nombre);
 console.log(objPersona.edad);
 console.log(objPersona.ciudad);
 
+
 // 2. Modificar propiedades
 objPersona.ciudad = "Bordeaux";
 objPersona.profesión = "modelo";
 
 console.log(objPersona);
+
 
 // 3. Objeto
 const objLibro = {
@@ -25,6 +27,7 @@ const objLibro = {
 }
 console.log(objLibro.resumen());
 
+
 // 4. Array de objetos
 const estudiantes = [
   { nombre: "Hanna", edad: 18, notaFinal: 8},
@@ -36,6 +39,7 @@ estudiantes.forEach(function(estudiante) {
 console.log(`Nombre: ${estudiante.nombre}, Nota final: ${estudiante.notaFinal}`);
 });
 
+
 // 5. Método para calcular la edad
 const persona = {
   nombre: "Selena",
@@ -46,3 +50,32 @@ return anioActual - this.anioNacimiento;
 }
 }
 console.log(persona.calcularEdad())
+
+
+// 6. Objeto Coche
+const objCoche = {
+  marca: "Toyota",
+  modelo: "Sienna",
+  anio: 2020,
+velocidadActual: 80,
+
+acelerar: function () {
+this.velocidadActual += 10
+console.log(`Velocidad después de acelerar: ${this.velocidadActual} km/h`);
+},
+frenar: function () {
+if (this.velocidadActual >=10) {
+this.velocidadActual -=10;
+} else {
+this.velocidadActual = 0;
+}
+console.log(`Velocidad después de frenar: ${this.velocidadActual} km/h`);
+}
+};
+
+// PROBAR MÉTODOS
+objCoche.acelerar();
+objCoche.frenar();
+
+
+// 6.  Recorrer un objeto
