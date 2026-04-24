@@ -25,4 +25,13 @@ const objLibro = {
 }
 console.log(objLibro.resumen());
 
-// 3. Objeto
+// 4. Array de objetos
+const estudiantes = [
+  { nombre: "Hanna", edad: 18, notaFinal: 8},
+  { nombre: "Lucca", edad: 22, notaFinal: 9},
+  { nombre: "William", edad: 24, notaFinal: 10},
+];
+//Imprimir nombre y nota final
+estudiantes.forEach(function(estudiante) {
+console.log(`Nombre: ${estudiante.nombre}, Nota final: ${estudiante.notaFinal}`);
+});
