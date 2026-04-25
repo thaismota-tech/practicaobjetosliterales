@@ -94,9 +94,19 @@ const animal = {
   colores: "blanco y negro",
   habitat: "África",
   entorno: "sabana",
-  alimento: "hierba y pasto"
+  alimento: "hierba y pasto",
 }
 function contarPropiedades(animal) {
 return Object.keys(animal).length;
 }
 console.log(contarPropiedades(animal));
+
+
+// 9. Objeto dentro de otro objeto
+const empresa = {
+  nombre: "Loretha",
+  direccion: {calle: "Nueva York", ciudad: "Boston", codigoPostal: 7777,}
+  }
+for (let key in empresa.direccion) {
+  console.log(`${key}: ${empresa.direccion[key]}`);
+}
