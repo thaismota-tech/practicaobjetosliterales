@@ -86,3 +86,17 @@ const producto = {
   for (let key in producto) {
   console.log(`${key}: ${producto[key]}`);
 };
+
+
+// 8. Contar propiedades
+const animal = {
+  nombre: "cebra",
+  colores: "blanco y negro",
+  habitat: "África",
+  entorno: "sabana",
+  alimento: "hierba y pasto"
+}
+function contarPropiedades(animal) {
+return Object.keys(animal).length;
+}
+console.log(contarPropiedades(animal));
