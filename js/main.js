@@ -110,3 +110,29 @@ const empresa = {
 for (let key in empresa.direccion) {
   console.log(`${key}: ${empresa.direccion[key]}`);
 }
+
+
+// 10. Añadir métodos a objetos
+const cuentaBancaria = {
+  titular: "Elisa",
+  saldo: 5000,
+
+depositar: function(cantidad) {
+  this.saldo += cantidad;
+  console.log(`Has depositado ${cantidad}€. Nuevo saldo: ${this.saldo}€`);
+  },
+
+retirar: function(cantidad) {
+  if (cantidad <= this.saldo) {
+    this.saldo -= cantidad;
+    console.log(`Has retirado ${cantidad}€. Saldo actual: ${this.saldo}€`);
+  } else {
+  console.log("Fondos insuficientes");
+  }
+}
+}
+//DEPOSITAR Y RETIRAR DINERO DE LA CUENTA:
+cuentaBancaria.depositar(500);
+cuentaBancaria.retirar(2000); 
+cuentaBancaria.retirar(10000);
+cuentaBancaria.depositar(10000);
