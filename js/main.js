@@ -78,4 +78,11 @@ objCoche.acelerar();
 objCoche.frenar();
 
 
-// 6.  Recorrer un objeto
+// 7.  Recorrer un objeto
+const producto = {
+  nombre: "brocha",
+  precio: "3 euros",
+  cantidad: 10,}
+  for (let key in producto) {
+  console.log(`${key}: ${producto[key]}`);
+};
